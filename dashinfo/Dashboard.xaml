@@ -1,0 +1,66 @@
+﻿<Window x:Class="dashinfo.Dashboard"
+        x:Name="mainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dashinfo"
+        mc:Ignorable="d"
+        Title="Dashboard" Height="350" Width="525" Background="Black" Loaded="Window_Loaded" Unloaded="Window_Unloaded" MouseLeftButtonUp="mainWindow_MouseLeftButtonUp">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Settings" Click="MenuItem_Click">
+                
+            </MenuItem>
+        </ContextMenu>
+    </Window.ContextMenu>
+    <Viewbox>
+        <Grid Height="320">
+            <Ellipse x:Name="rpm1" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31"/>
+            <Ellipse x:Name="rpm2" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="41,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31"/>
+            <Ellipse x:Name="rpm3" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="72,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31"/>
+            <Ellipse x:Name="rpm4" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="103,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31"/>
+            <Ellipse x:Name="rpm5" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="134,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31"/>
+            <Ellipse x:Name="rpm6" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="165,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31"/>
+            <Ellipse x:Name="rpm7" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="196,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31"/>
+            <Ellipse x:Name="rpm8" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="227,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31"/>
+            <Ellipse x:Name="rpm9" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="258,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31"/>
+            <Ellipse x:Name="rpm10" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="289,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31"/>
+            <Ellipse x:Name="rpm11" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="320,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31" RenderTransformOrigin="11.151,0.356"/>
+            <Ellipse x:Name="rpm12" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="351,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31" RenderTransformOrigin="11.151,0.356"/>
+            <Ellipse x:Name="rpm13" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="382,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31" RenderTransformOrigin="11.151,0.356"/>
+            <Ellipse x:Name="rpm14" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="413,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31" RenderTransformOrigin="11.151,0.356"/>
+            <Ellipse x:Name="rpm15" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="444,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31" RenderTransformOrigin="11.151,0.356"/>
+
+            <TextBlock x:Name="currentGear" HorizontalAlignment="Left" Margin="211,55,0,0" TextWrapping="Wrap" Text="{Binding ElementName=mainWindow,Path=Gear}" VerticalAlignment="Top" Foreground="White" Height="140" FontSize="110" Width="78" />
+            <Label x:Name="lblCurrentLap" Content="Current Lap" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+
+            <TextBlock x:Name="currentLapTime" HorizontalAlignment="Left" Margin="16,114,0,0" TextWrapping="Wrap" Text="{Binding ElementName=mainWindow, Path=LapTime}" VerticalAlignment="Top" Foreground="White" FontSize="18" Width="118"/>
+            <Label x:Name="lblOil" Content="Oil" HorizontalAlignment="Left" Margin="472,72,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+
+            <TextBlock x:Name="oilTemp" HorizontalAlignment="Right" Margin="0,114,10,0" TextWrapping="Wrap" Text="{Binding ElementName=mainWindow,Path=OilTemp}" VerticalAlignment="Top" Foreground="White" FontSize="18" Width="54" TextAlignment="Right"/>
+            <Label x:Name="lblWater" Content="Water" HorizontalAlignment="Left" Margin="358,72,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+
+            <TextBlock x:Name="waterTemp" HorizontalAlignment="Left" Margin="351,114,0,0" TextWrapping="Wrap" Text="{Binding ElementName=mainWindow,Path=WaterTemp}" VerticalAlignment="Top" Foreground="White" FontSize="18" Width="62" TextAlignment="Right"/>
+            <Label x:Name="lbllfTire" Content="LF" HorizontalAlignment="Left" Margin="155,200,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
+
+            <TextBlock x:Name="lapNumber" HorizontalAlignment="Left" Margin="16,200,0,0" TextWrapping="Wrap" Text="{Binding ElementName=mainWindow, Path=LapNumber}" VerticalAlignment="Top" Foreground="White" FontSize="18" Width="21"/>
+            <Label x:Name="lblFuel" Content="Fuel" HorizontalAlignment="Left" Margin="461,158,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+
+            <TextBlock x:Name="fuel" HorizontalAlignment="Right" Margin="0,200,12,0" TextWrapping="Wrap" Text="{Binding ElementName=mainWindow,Path=Fuel}" VerticalAlignment="Top" Foreground="White" FontSize="18" Width="52" TextAlignment="Right"/>
+            <Ellipse x:Name="rpm16" Fill="Black" HorizontalAlignment="Left" Height="32" Margin="475,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="31" RenderTransformOrigin="11.151,0.356"/>
+
+            <Label x:Name="lblLapDivider" Content="/" HorizontalAlignment="Left" Margin="37,195,0,18.667" Foreground="White" FontSize="14" Width="20"/>
+            <TextBlock x:Name="maxLaps" HorizontalAlignment="Left" Margin="59,200,0,0" TextWrapping="Wrap" Text="{Binding ElementName=mainWindow, Path=MaxLaps}" VerticalAlignment="Top" Foreground="White" FontSize="18" Width="25" RenderTransformOrigin="0.575,-1.772" Height="20"/>
+            <Label x:Name="lbllrTire" Content="LR" HorizontalAlignment="Left" Margin="155,252,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
+            <Label x:Name="lblrfTire" Content="RF" HorizontalAlignment="Left" Margin="306,200,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" RenderTransformOrigin="4.99,0.486"/>
+            <Label x:Name="lblrrTire" Content="RR" HorizontalAlignment="Left" Margin="306,252,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
+            <TextBlock x:Name="lfTire" HorizontalAlignment="Left" Margin="155,231,0,0" TextWrapping="Wrap" Text="{Binding Path=LFTireTemp, ElementName=mainWindow}" VerticalAlignment="Top" Foreground="White" FontSize="18" Width="41"/>
+            <TextBlock x:Name="lrTire" HorizontalAlignment="Left" Margin="155,283,0,0" TextWrapping="Wrap" Text="{Binding Path=LRTireTemp, ElementName=mainWindow}" VerticalAlignment="Top" Foreground="White" FontSize="18" Width="41"/>
+            <TextBlock x:Name="rfTire" HorizontalAlignment="Left" Margin="312,231,0,0" TextWrapping="Wrap" Text="{Binding Path=RFTireTemp, ElementName=mainWindow}" VerticalAlignment="Top" Foreground="White" FontSize="18" Width="39" RenderTransformOrigin="0.444,0.45"/>
+            <TextBlock x:Name="rrTire" HorizontalAlignment="Left" Margin="314,283,0,0" TextWrapping="Wrap" Text="{Binding Path=RRTireTemp, ElementName=mainWindow}" VerticalAlignment="Top" Foreground="White" FontSize="18" Width="59" RenderTransformOrigin="0.365,0.535"/>
+            <Label x:Name="lblLaps" Content="Laps" HorizontalAlignment="Left" Margin="32,158,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" RenderTransformOrigin="-4.201,-0.916"/>
+
+        </Grid>
+    </Viewbox>
+</Window>
