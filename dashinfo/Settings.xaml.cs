@@ -87,6 +87,8 @@ namespace dashinfo
 
         private void Window_SourceInitialized(object sender, EventArgs e)
         {
+            // This removes the maximize and minimize boxes from the window.
+            // For some reason, there is no way to do this using WPF APIs, so we must call the Windows API.
             var hwnd = new WindowInteropHelper((Window)sender).Handle;
             var value = GetWindowLong(hwnd, GWL_STYLE);
             SetWindowLong(hwnd, GWL_STYLE, (int)(value & ~WS_MAXIMIZEBOX & ~WS_MINIMIZEBOX));

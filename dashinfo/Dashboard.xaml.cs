@@ -126,6 +126,9 @@ namespace dashinfo
             get; set;
         }
 
+        // Below are a bunch of properties that contain the values of the data we're keeping track of.
+        // DependencyProperty is used so the WPF controls can bind to these properties directly and update when necessary.
+        // These properties are contained within a region since there are a lot of them.
         #region Engine Properties
 
         /// <summary>
@@ -311,6 +314,7 @@ namespace dashinfo
         }
 
         #endregion
+        
         /// <summary>
         /// Callback to receive UDP packet
         /// </summary>
